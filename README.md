@@ -25,10 +25,58 @@
     ])
 ```
 
-5. 运行 Node.js服务  
+5. 添加配置文件（config/common.json）
+```
+ {
+    "token": "TOKEN",
+    "key": "KEY",
+    "appid": "APPID",
+    "secret": "SECRET",
+    "api": "api.weixin.qq.com",
+    "cache": "-P PORT user@ip:/PATH/TO/CACHE",
+    "domain": ["DOMAIN1", "DOMAIN2"],
+    "sync": {
+        "testing": "PRODUCTION_DOMAIN",
+        "production": "TESTING_DOMAIN"
+    },
+    "dir": {
+        "cache": "./data/cache/",
+        "config": "./data/config/",
+        "session": "./data/session/",
+        "message": "./data/message/",
+        "commit": "./data/commit/",
+        "submit": "./data/submit/",
+        "audit": "./data/audit/",
+        "publish": "./data/publish/",
+        "log": "./data/log/",
+        "qrcode": "./data/qrcode/",
+        "notify": "./data/notify/",
+        "beta": "./data/beta/"
+    },
+    "notifyEnv": "production",
+    "notifyTest": "TESTING_DOMAIN",
+    "login": {
+        "appid": "APPID",
+        "secret": "SECRET",
+        "domain": "DOMAIN"
+    },
+    "service": {
+        "key": "KEY",
+        "secret": "SECRET"
+    },
+    "mainAppid": "MAIN_APPID",
+    "ip": {
+        "development": "DEVELOPMENT_IP",
+        "testing": "TESTING_IP",
+        "production": "PRODUCTION_IP"
+    }
+}
+```
+
+6. 运行 Node.js服务  
 >node app  
 
-6. 访问站点  
+7. 访问站点  
 >http://localhost:9031/  
 
 
