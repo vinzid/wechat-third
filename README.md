@@ -20,8 +20,18 @@
 ```
     use wechatThird
     db.permission.insertMany([
-        {"type":"notify","act":"*","anonym":true},
-        {"type":"user","act":"logout","title":"退出","menu":true,"order":1000}
+        {"type" : "notify", "act" : "*", "anonym" : true },
+        {"type" : "develop", "act" : "bat", "title" : "批处理", "role" : [ "super", "admin" ], "menu" : true, "order" : 100 },
+        {"type" : "user", "act" : "appids", "title" : "已授权", "menu" : true, "order" : 100 },
+        {"type" : "request", "act" : "authorize", "title" : "授权", "menu" : true, "order" : 100 },
+        {"type" : "develop", "act" : "data", "title" : "数据", "role" : [ "super", "admin", "developer" ], "menu" : true, "order" : 100 },
+        {"type" : "develop", "act" : "mongo", "title" : "数据库", "role" : [ "super", "admin", "developer" ], "menu" : true, "order" : 100 },
+        {"type" : "develop", "act" : "command", "title" : "命令", "role" : [ "super" ], "menu" : true, "order" : 100 },
+        {"type" : "develop", "act" : "*", "role" : [ "super", "admin" ] }
+        {"type" : "user", "act" : "setting", "title" : "设置", "menu" : true, "order" : 100 },
+        {"type" : "admin", "act" : "*", "role" : [ "super", "admin" ] }
+        {"type" : "admin", "act" : "list", "query" : "collection=user", "title" : "用户", "role" : [ "super", "admin" ], "menu" : true, "order" : 100 }
+        {"type" : "user", "act" : "logout", "title" : "退出", "menu" : true, "order" : 1000 }
     ])
 ```
 
