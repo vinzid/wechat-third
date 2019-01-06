@@ -95,7 +95,7 @@
     /  根目录  
     app.js  程序入口  
     package.json  站点信息  
-    Readme.md  说明文档  
+    README.md  说明文档  
     .gitignore  git 忽略文件  
 
     config/  配置  
